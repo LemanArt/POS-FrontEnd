@@ -1,0 +1,380 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_pos_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="34" />
+9-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:2:5-66
+11-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:2:22-64
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:3:5-79
+12-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:3:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:4:5-81
+13-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:4:22-78
+14    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+14-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:5:5-81
+14-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:5:22-79
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:6:5-80
+15-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:6:22-78
+16    <uses-permission
+16-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:7:5-79
+17        android:name="android.permission.READ_EXTERNAL_STORAGE"
+17-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:7:22-77
+18        android:maxSdkVersion="32" />
+18-->[:file_picker] C:\laragon\www\flutter_pos_app\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:11:9-35
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:8:5-65
+19-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:8:22-62
+20    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+20-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:9:5-75
+20-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:9:22-73
+21    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+21-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:10:5-74
+21-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:10:22-72
+22    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+22-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:11:5-74
+22-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:11:22-72
+23
+24    <!-- Query untuk proses teks -->
+25    <queries>
+25-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:14:5-19:15
+26        <intent>
+26-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:15:9-18:18
+27            <action android:name="android.intent.action.PROCESS_TEXT" />
+27-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:16:13-73
+27-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:16:21-70
+28
+29            <data android:mimeType="text/plain" />
+29-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:17:13-51
+29-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:17:19-48
+30        </intent>
+31        <intent>
+31-->[:file_picker] C:\laragon\www\flutter_pos_app\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:14:9-18:18
+32            <action android:name="android.intent.action.GET_CONTENT" />
+32-->[:file_picker] C:\laragon\www\flutter_pos_app\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-72
+32-->[:file_picker] C:\laragon\www\flutter_pos_app\build\file_picker\intermediates\merged_manifest\release\AndroidManifest.xml:15:21-69
+33
+34            <data android:mimeType="*/*" />
+34-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:17:13-51
+34-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:17:19-48
+35        </intent>
+36    </queries>
+37    <!--
+38         Required to query activities that can process text, see:
+39         https://developer.android.com/training/package-visibility and
+40         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+41
+42         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+43    -->
+44    <queries>
+44-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:14:5-19:15
+45        <intent>
+45-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:15:9-18:18
+46            <action android:name="android.intent.action.PROCESS_TEXT" />
+46-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:16:13-73
+46-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:16:21-70
+47
+48            <data android:mimeType="text/plain" />
+48-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:17:13-51
+48-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:17:19-48
+49        </intent>
+50    </queries>
+51
+52    <uses-permission android:name="android.permission.BLUETOOTH" />
+52-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-68
+52-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:9:22-65
+53    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+53-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-74
+53-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:10:22-71
+54    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+54-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-76
+54-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-73
+55    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+55-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:12:5-73
+55-->[:print_bluetooth_thermal] C:\laragon\www\flutter_pos_app\build\print_bluetooth_thermal\intermediates\merged_manifest\release\AndroidManifest.xml:12:22-70
+56
+57    <permission
+57-->[androidx.core:core:1.13.1] C:\Users\Leman\.gradle\caches\transforms-3\2f6a5506f4dac22f7ab67b13b215ea43\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+58        android:name="com.example.flutter_pos_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+58-->[androidx.core:core:1.13.1] C:\Users\Leman\.gradle\caches\transforms-3\2f6a5506f4dac22f7ab67b13b215ea43\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+59        android:protectionLevel="signature" />
+59-->[androidx.core:core:1.13.1] C:\Users\Leman\.gradle\caches\transforms-3\2f6a5506f4dac22f7ab67b13b215ea43\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+60
+61    <uses-permission android:name="com.example.flutter_pos_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+61-->[androidx.core:core:1.13.1] C:\Users\Leman\.gradle\caches\transforms-3\2f6a5506f4dac22f7ab67b13b215ea43\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+61-->[androidx.core:core:1.13.1] C:\Users\Leman\.gradle\caches\transforms-3\2f6a5506f4dac22f7ab67b13b215ea43\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+62
+63    <application
+64        android:name="android.app.Application"
+64-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:25:9-42
+65        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+65-->[androidx.core:core:1.13.1] C:\Users\Leman\.gradle\caches\transforms-3\2f6a5506f4dac22f7ab67b13b215ea43\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+66        android:enableOnBackInvokedCallback="true"
+66-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:21:9-51
+67        android:icon="@mipmap/ic_launcher"
+67-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:26:9-43
+68        android:label="flutter_pos_app"
+68-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:24:9-40
+69        android:requestLegacyExternalStorage="true"
+69-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:22:9-52
+70        android:usesCleartextTraffic="true" >
+70-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:23:9-44
+71        <activity
+71-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:27:9-48:20
+72            android:name="com.example.flutter_pos_app.MainActivity"
+72-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:28:13-41
+73            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+73-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:33:13-163
+74            android:exported="true"
+74-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:29:13-36
+75            android:hardwareAccelerated="true"
+75-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:34:13-47
+76            android:launchMode="singleTop"
+76-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:30:13-43
+77            android:taskAffinity=""
+77-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:31:13-36
+78            android:theme="@style/LaunchTheme"
+78-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:32:13-47
+79            android:windowSoftInputMode="adjustResize" >
+79-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:35:13-55
+80
+81            <!--
+82                 Specifies an Android theme to apply to this Activity as soon as
+83                 the Android process has started. This theme is visible to the user
+84                 while the Flutter UI initializes. After that, this theme continues
+85                 to determine the Window background behind the Flutter UI.
+86            -->
+87            <meta-data
+87-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:40:13-43:17
+88                android:name="io.flutter.embedding.android.NormalTheme"
+88-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:41:15-70
+89                android:resource="@style/NormalTheme" />
+89-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:42:15-52
+90
+91            <intent-filter>
+91-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:44:13-47:29
+92                <action android:name="android.intent.action.MAIN" />
+92-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:45:17-68
+92-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:45:25-66
+93
+94                <category android:name="android.intent.category.LAUNCHER" />
+94-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:46:17-76
+94-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:46:27-74
+95            </intent-filter>
+96        </activity>
+97        <!--
+98             Don't delete the meta-data below.
+99             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+100        -->
+101        <meta-data
+101-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:51:9-53:33
+102            android:name="flutterEmbedding"
+102-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:52:13-44
+103            android:value="2" />
+103-->C:\laragon\www\flutter_pos_app\android\app\src\main\AndroidManifest.xml:53:13-30
+104
+105        <provider
+105-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:9-19:20
+106            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+106-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-82
+107            android:authorities="com.example.flutter_pos_app.flutter.image_provider"
+107-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-74
+108            android:exported="false"
+108-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-37
+109            android:grantUriPermissions="true" >
+109-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-47
+110            <meta-data
+110-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-18:75
+111                android:name="android.support.FILE_PROVIDER_PATHS"
+111-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-67
+112                android:resource="@xml/flutter_image_picker_file_paths" />
+112-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:18:17-72
+113        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+114        <service
+114-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:21:9-33:19
+115            android:name="com.google.android.gms.metadata.ModuleDependencies"
+115-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-78
+116            android:enabled="false"
+116-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-36
+117            android:exported="false" >
+117-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-37
+118            <intent-filter>
+118-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:26:13-28:29
+119                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+119-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:27:17-94
+119-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:27:25-91
+120            </intent-filter>
+121
+122            <meta-data
+122-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-32:36
+123                android:name="photopicker_activity:0:required"
+123-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:31:17-63
+124                android:value="" />
+124-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:32:17-33
+125        </service>
+126
+127        <provider
+127-->[:open_file_android] C:\laragon\www\flutter_pos_app\build\open_file_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:9-21:20
+128            android:name="com.crazecoder.openfile.FileProvider"
+128-->[:open_file_android] C:\laragon\www\flutter_pos_app\build\open_file_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-64
+129            android:authorities="com.example.flutter_pos_app.fileProvider.com.crazecoder.openfile"
+129-->[:open_file_android] C:\laragon\www\flutter_pos_app\build\open_file_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-88
+130            android:exported="false"
+130-->[:open_file_android] C:\laragon\www\flutter_pos_app\build\open_file_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-37
+131            android:grantUriPermissions="true"
+131-->[:open_file_android] C:\laragon\www\flutter_pos_app\build\open_file_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-47
+132            android:requestLegacyExternalStorage="true" >
+132-->[:open_file_android] C:\laragon\www\flutter_pos_app\build\open_file_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-56
+133            <meta-data
+133-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-18:75
+134                android:name="android.support.FILE_PROVIDER_PATHS"
+134-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-67
+135                android:resource="@xml/filepaths" />
+135-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:18:17-72
+136        </provider>
+137        <provider
+137-->[:printing] C:\laragon\www\flutter_pos_app\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+138            android:name="net.nfet.flutter.printing.PrintFileProvider"
+138-->[:printing] C:\laragon\www\flutter_pos_app\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-71
+139            android:authorities="com.example.flutter_pos_app.flutter.printing"
+139-->[:printing] C:\laragon\www\flutter_pos_app\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-68
+140            android:exported="false"
+140-->[:printing] C:\laragon\www\flutter_pos_app\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+141            android:grantUriPermissions="true" >
+141-->[:printing] C:\laragon\www\flutter_pos_app\build\printing\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+142            <meta-data
+142-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-18:75
+143                android:name="android.support.FILE_PROVIDER_PATHS"
+143-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-67
+144                android:resource="@xml/flutter_printing_file_paths" />
+144-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:18:17-72
+145        </provider>
+146        <!--
+147           Declares a provider which allows us to store files to share in
+148           '.../caches/share_plus' and grant the receiving action access
+149        -->
+150        <provider
+150-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:15:9-23:20
+151            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+151-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-77
+152            android:authorities="com.example.flutter_pos_app.flutter.share_provider"
+152-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-74
+153            android:exported="false"
+153-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-37
+154            android:grantUriPermissions="true" >
+154-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-47
+155            <meta-data
+155-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-18:75
+156                android:name="android.support.FILE_PROVIDER_PATHS"
+156-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-67
+157                android:resource="@xml/flutter_share_file_paths" />
+157-->[:image_picker_android] C:\laragon\www\flutter_pos_app\build\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:18:17-72
+158        </provider>
+159        <!--
+160           This manifest declared broadcast receiver allows us to use an explicit
+161           Intent when creating a PendingItent to be informed of the user's choice
+162        -->
+163        <receiver
+163-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:28:9-34:20
+164            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+164-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-82
+165            android:exported="false" >
+165-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-37
+166            <intent-filter>
+166-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:31:13-33:29
+167                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+167-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:32:17-65
+167-->[:share_plus] C:\laragon\www\flutter_pos_app\build\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:32:25-62
+168            </intent-filter>
+169        </receiver>
+170
+171        <uses-library
+171-->[androidx.window:window:1.0.0-beta04] C:\Users\Leman\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+172            android:name="androidx.window.extensions"
+172-->[androidx.window:window:1.0.0-beta04] C:\Users\Leman\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+173            android:required="false" />
+173-->[androidx.window:window:1.0.0-beta04] C:\Users\Leman\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+174        <uses-library
+174-->[androidx.window:window:1.0.0-beta04] C:\Users\Leman\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+175            android:name="androidx.window.sidecar"
+175-->[androidx.window:window:1.0.0-beta04] C:\Users\Leman\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+176            android:required="false" />
+176-->[androidx.window:window:1.0.0-beta04] C:\Users\Leman\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+177
+178        <provider
+178-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+179            android:name="androidx.startup.InitializationProvider"
+179-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+180            android:authorities="com.example.flutter_pos_app.androidx-startup"
+180-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+181            android:exported="false" >
+181-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+182            <meta-data
+182-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+183                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+183-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+184                android:value="androidx.startup" />
+184-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Leman\.gradle\caches\transforms-3\fd5566ded44aaffd1a50ecce95aa3bb6\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+185            <meta-data
+185-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Leman\.gradle\caches\transforms-3\3a9e6a90f5696f87ff8853862369a710\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+186                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+186-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Leman\.gradle\caches\transforms-3\3a9e6a90f5696f87ff8853862369a710\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+187                android:value="androidx.startup" />
+187-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Leman\.gradle\caches\transforms-3\3a9e6a90f5696f87ff8853862369a710\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+188            <meta-data
+188-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+189                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+189-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+190                android:value="androidx.startup" />
+190-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+191        </provider>
+192
+193        <receiver
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+194            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+195            android:directBootAware="false"
+195-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+196            android:enabled="true"
+196-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+197            android:exported="true"
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+198            android:permission="android.permission.DUMP" >
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+199            <intent-filter>
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+200                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+201            </intent-filter>
+202            <intent-filter>
+202-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+203                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+204            </intent-filter>
+205            <intent-filter>
+205-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+206                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+207            </intent-filter>
+208            <intent-filter>
+208-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+209                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Leman\.gradle\caches\transforms-3\e852edee255e4ba7fa4d5b58ba237ddb\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+210            </intent-filter>
+211        </receiver>
+212    </application>
+213
+214</manifest>

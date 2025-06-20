@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "app.web.groons.print_bluetooth_thermal-merged_res-15:/menu/example_menu2.xml",
+        "source": "app.web.groons.print_bluetooth_thermal-core-1.7.0-6:/menu/example_menu2.xml"
+    },
+    {
+        "merged": "app.web.groons.print_bluetooth_thermal-merged_res-15:/menu/example_menu.xml",
+        "source": "app.web.groons.print_bluetooth_thermal-core-1.7.0-6:/menu/example_menu.xml"
+    }
+]
