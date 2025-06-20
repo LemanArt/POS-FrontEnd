@@ -1,1 +1,0 @@
- C:\\laragon\\www\\flutter_pos_app\\.dart_tool\\flutter_build\\b86df7bf3ad70c98da9f65b9ee23d89d\\native_assets.yaml: 
