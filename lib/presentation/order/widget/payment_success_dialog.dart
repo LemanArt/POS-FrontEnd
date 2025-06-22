@@ -11,10 +11,18 @@ import 'package:print_bluetooth_thermal/print_bluetooth_thermal.dart';
 import '../../../core/assets/assets.gen.dart';
 import '../../../core/components/buttons.dart';
 import '../../../core/components/spaces.dart';
+import '../../../core/constants/colors.dart';
 import '../../../data/dataoutputs/cwb_print.dart';
 
-class PaymentSuccessDialog extends StatelessWidget {
+class PaymentSuccessDialog extends StatefulWidget {
   const PaymentSuccessDialog({super.key});
+
+  @override
+  State<PaymentSuccessDialog> createState() => _PaymentSuccessDialogState();
+}
+
+class _PaymentSuccessDialogState extends State<PaymentSuccessDialog> {
+  bool isHoveringPrint = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,24 +50,18 @@ class PaymentSuccessDialog extends StatelessWidget {
                 (data, qty, total, paymentType, nominal, idKasir, nameKasir) {
               context.read<CheckoutBloc>().add(const CheckoutEvent.started());
 
-              // Menghitung kembalian
               int kembalian = nominal - total;
               String kembalianText = kembalian.currencyFormatRp;
-              // Menampilkan kembalian jika ada
+
               return Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SpaceHeight(12.0),
-                  _LabelValue(
-                    label: 'METODE PEMBAYARAN',
-                    value: paymentType,
-                  ),
+                  _LabelValue(label: 'METODE PEMBAYARAN', value: paymentType),
                   const Divider(height: 36.0),
                   _LabelValue(
-                    label: 'TOTAL PEMBELIAN',
-                    value: total.currencyFormatRp,
-                  ),
+                      label: 'TOTAL PEMBELIAN', value: total.currencyFormatRp),
                   const Divider(height: 36.0),
                   _LabelValue(
                     label: 'NOMINAL BAYAR',
@@ -68,15 +70,11 @@ class PaymentSuccessDialog extends StatelessWidget {
                         : nominal.currencyFormatRp,
                   ),
                   const Divider(height: 36.0),
-                  _LabelValue(
-                    label: 'KEMBALIAN',
-                    value: kembalianText, // Menampilkan kembalian
-                  ),
+                  _LabelValue(label: 'KEMBALIAN', value: kembalianText),
                   const Divider(height: 36.0),
                   _LabelValue(
-                    label: 'WAKTU PEMBAYARAN',
-                    value: DateTime.now().toFormattedTime(),
-                  ),
+                      label: 'WAKTU PEMBAYARAN',
+                      value: DateTime.now().toFormattedTime()),
                   const SpaceHeight(40.0),
                   Row(
                     mainAxisSize: MainAxisSize.min,
@@ -95,22 +93,48 @@ class PaymentSuccessDialog extends StatelessWidget {
                       ),
                       const SpaceWidth(10.0),
                       Flexible(
-                        child: Button.outlined(
-                          onPressed: () async {
-                            final printValue =
-                                await CwbPrint.instance.printOrder(
-                              data,
-                              qty,
-                              total,
-                              paymentType,
-                              nominal,
-                              nameKasir,
-                            );
-                            await PrintBluetoothThermal.writeBytes(printValue);
-                          },
-                          label: 'Print',
-                          icon: Assets.icons.print.svg(width: 25, height: 25),
-                          fontSize: 13,
+                        child: MouseRegion(
+                          onEnter: (_) =>
+                              setState(() => isHoveringPrint = true),
+                          onExit: (_) =>
+                              setState(() => isHoveringPrint = false),
+                          child: OutlinedButton(
+                            onPressed: () async {
+                              final printValue =
+                                  await CwbPrint.instance.printOrder(
+                                data,
+                                qty,
+                                total,
+                                paymentType,
+                                nominal,
+                                nameKasir,
+                              );
+                              await PrintBluetoothThermal.writeBytes(
+                                  printValue);
+                            },
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: isHoveringPrint
+                                  ? AppColors.light
+                                  : Colors.transparent,
+                              side: const BorderSide(color: AppColors.primary),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Assets.icons.print.svg(width: 25, height: 25),
+                                const SizedBox(width: 8),
+                                Text(
+                                  'Print',
+                                  style: TextStyle(
+                                    color: isHoveringPrint
+                                        ? AppColors.black
+                                        : AppColors.primary,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -139,16 +163,11 @@ class _LabelValue extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          label,
-          style: const TextStyle(),
-        ),
+        Text(label),
         const SpaceHeight(5.0),
         Text(
           value,
-          style: const TextStyle(
-            fontWeight: FontWeight.w700,
-          ),
+          style: const TextStyle(fontWeight: FontWeight.w700),
         ),
       ],
     );
